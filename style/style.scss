@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #highestscore,
+  #myscore {
+    color: white;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+  }
+
+  #myscore {
+    margin-top: 1rem;
+  }
+
+  //button is inline-block
+  #start {
+    width: 7rem;
+    height: 2rem;
+    padding: 0.1rem, 0.3rem;
+    background-color: plum;
+    border-radius: 20px;
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+    &:hover {
+      color: white;
+    }
+  }
+
+  #mycanvas {
+    //<canvas>是特別的標籤 其內部設定的寬高不會被 CSS 影響
+    //即使這邊全域 box-sizing 設定成 border-box 邊框仍會加在外面
+    border: 5px solid palevioletred;
+    //父層沒寫 position 屬性，會一路找到根元素 <html>
+    //也就是會找到瀏覽器的初始視窗
+    position: absolute;
+    top: 35%;
+    //定位元素，其預設會在背景、靜態元素之上
+    //如果只有單純寫 position: absolute;
+    //會出現在中間最上面，而蓋住其它的元素 (因為absolute會跳脫原本的排列)
+    //由於在 <body> 有設定 align-items: center;
+    //所以原本就會在中間的位置
+  }
+}

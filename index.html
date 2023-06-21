@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>貪食蛇遊戲</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- 內容在 JS 當中處理 -->
+    <p id="highestscore"></p>
+    <p id="myscore"></p>
+    <!-- 當點擊 button 時，重新整理面頁 -->
+    <!-- The location.reload() method reloads the current URL, like the Refresh button -->
+    <button type="button" id="start" onclick="location.reload()">
+      開始新遊戲
+    </button>
+    <!-- 在 <canvas> 中的內容，是當瀏覽器不支援 <canvas> 或 JavaScript 時，顯示給使用者看的 fallback 內容 -->
+    <!-- 在 <canvas> 內部設定的寬高是固定的，不會因為 CSS 對全域設定成 box-sizing: border-box 而有所影響 -->
+    <canvas
+      id="mycanvas"
+      width="320"
+      height="320"
+      style="background-color: black"
+    >
+      >你的瀏覽器不支援 canvas!</canvas
+    >
+    <script src="./app.js"></script>
+  </body>
+</html>
