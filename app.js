@@ -120,7 +120,8 @@ function draw() {
     }
   }
 
-  //先讓背景全黑色
+  //畫出其他東西前，先讓背景(重新)變成全黑色
+  //這兩行如果不寫，每次更新時，蛇上一回所繪製的位置仍會存在
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
